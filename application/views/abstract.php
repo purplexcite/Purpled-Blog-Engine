@@ -1,12 +1,15 @@
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru-RU">
     <head>
         <title><?php echo $title ?></title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta name="keywords" content="">
-        <meta name="description" content="">
-        <meta http-equiv="cache-control" content="no-cache">
-	<meta http-equiv="pragma" content="no-cache">
-        <link rel="shortcut icon" href="favicon.ico">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="keywords" content="разработка на kohana, программирование на kohana framework, изучение kohana framework, блог по программированию, kohana framework" />
+        <meta name="description" content="Блог purplexcite" />
+        <meta http-equiv="cache-control" content="no-cache" />
+	<meta http-equiv="pragma" content="no-cache" />
+        <meta name="Robots" content="index,follow" />
+        <link rel="shortcut icon" href="favicon.ico" />
+        <link rel="alternate" type="application/rss+xml" href="http://purpled.biz/rss/" title="Последние сообщения" />
         <?php echo html::style('media/css/site.css') ?>
     </head>
     <body>

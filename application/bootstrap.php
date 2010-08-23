@@ -52,6 +52,7 @@ ini_set('unserialize_callback_func', 'spl_autoload_call');
 Kohana::init(array(
 	'base_url'   => '/',
         'index_file' => FALSE,
+        'errors' => FALSE,
 ));
 
 /**
@@ -90,6 +91,12 @@ Route::set('admin', 'admin(/<action>(/<param>))')
 	->defaults(array(
 		'controller' => 'admin_main',
 		'action'     => 'start',
+	));
+
+Route::set('rss', 'rss(/<action>)')
+	->defaults(array(
+		'controller' => 'rss',
+		'action'     => 'show',
 	));
 
 // Catch-all route for Captcha classes to run
