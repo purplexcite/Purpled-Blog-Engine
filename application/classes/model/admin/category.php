@@ -22,6 +22,22 @@ Class Model_Admin_Category extends Model {
         return $this->tmp;
     }
 
+    // Delete categories recursively
+    function delete_categories($from_cat)
+    {
+        $this->db = ORM::factory('category')
+                ->where('parent', '=', $from_cat)
+                ->find_all();
+
+        foreach($this->db as $category)
+        {
+            ORM::factory('category', $category->id)
+                            ->delete();
+
+            $this->delete_categories($category->id);
+        }
+    }
+
     // Update categories
     function edit_category()
     {
@@ -34,6 +50,8 @@ Class Model_Admin_Category extends Model {
             {
                 $this->db = ORM::factory('category')
                         ->delete($_POST['delete'][$i]);
+
+                $this->delete_categories($_POST['delete'][$i]);
 
                 // Clean posts of this category
                 DB::delete('posts')
