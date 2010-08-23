@@ -121,6 +121,7 @@ a:hover {
 }
 .content {
     float: left;
+    width: 50%;
 
     margin-left: 60px;
     margin-top: 20px;
