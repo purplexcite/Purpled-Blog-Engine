@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru-RU">
     <head>
-        <title><?php echo $title ?></title>
+        <title><?php echo $title.' - '.(!empty($title_info) ? $title_info : 'Главная страница') ?></title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="keywords" content="разработка на kohana, программирование на kohana framework, изучение kohana framework, блог по программированию, kohana framework" />
         <meta name="description" content="Блог purplexcite" />

@@ -70,4 +70,14 @@ Class Model_Category extends ORM {
         return $this->breadcrumbs;
     }
 
+    // Get title for header
+    function get_title($catid)
+    {
+        $this->db = ORM::factory('category')
+                ->where('id', '=', $catid)
+                ->find();
+
+        return $this->db->name;
+    }
+
 }

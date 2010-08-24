@@ -101,9 +101,6 @@ class Controller_Site extends Controller_Abstract {
             $this->action_show_posts();
             $this->template->content->pagination = $this->pagination;
         }
-        else {
-            $this->template->content = View::factory('secondary');
-        }
 
         $this->template->breadcrumbs = $this->breadcrumbs;
     }
@@ -121,6 +118,7 @@ class Controller_Site extends Controller_Abstract {
         if(!empty($this->catid))
         {
             $this->template->content->categories = $this->category->show_secondary($this->catid);
+            $this->template->title_info = $this->category->get_title($this->catid);
             $this->template->content->posts = $this->post->show_all(5, 5 * ($page - 1), $this->catid, $this->search);
         }
         else
@@ -180,6 +178,7 @@ class Controller_Site extends Controller_Abstract {
         $this->template->content = View::factory('post');
         $this->template->breadcrumbs = $this->breadcrumbs;
         $this->template->content->title = $this->post->show_post($this->postid)->title;
+        $this->template->title_info = $this->post->show_post($this->postid)->title;
         $this->template->content->text = $this->post->show_post($this->postid)->content;
         $this->template->content->posted = $this->post->show_post($this->postid)->posted;
         $this->template->content->author = $this->post->show_post($this->postid)->username;
