@@ -3,7 +3,7 @@
     <head>
         <title><?php echo $title.' - '.(!empty($title_info) ? $title_info : 'Главная страница') ?></title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="keywords" content="разработка на kohana, программирование на kohana framework, изучение kohana framework, блог по программированию, kohana framework" />
+        <meta name="keywords" content="разработка на kohana, программирование на kohana framework, изучение kohana framework, блог по программированию, kohana framework, <?php echo (!empty($title_info) ? $title_info : '') ?>" />
         <meta name="description" content="Блог purplexcite" />
         <meta http-equiv="cache-control" content="no-cache" />
 	<meta http-equiv="pragma" content="no-cache" />
