@@ -26,7 +26,7 @@ Class Model_Admin_Comment extends Model {
             for($i = 0; $i < $this->tmp; $i++)
             {
                 $this->db = ORM::factory('comment')
-                                ->delete($_POST['id'][$i]);
+                                ->delete($_POST['delete'][$i]);
             }
         }
 
