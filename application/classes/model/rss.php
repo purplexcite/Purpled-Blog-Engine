@@ -8,7 +8,7 @@ Class Model_Rss extends Model {
     {
         $this->db = DB::select()
                 ->from('posts')
-                -order_by('id', 'DESC')
+                ->order_by('id', 'DESC')
                 ->execute();
 
         return $this->db;
