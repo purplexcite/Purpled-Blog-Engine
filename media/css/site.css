@@ -111,16 +111,11 @@ a:hover {
     color: #CC0033;
 }
 .breadcrumb {
-    margin-top: 20px;
-    margin-left: 250px;
-    margin-right: 100px;
-
-    padding-top: 5px;
-    padding-bottom: 5px;
-
-    background: #584234;
-
-    width: 740px;
+    background:#584234;
+    margin-left:240px;
+    margin-top:20px;
+    padding:5px 0;
+    width:740px;
 
     border: 0px solid #909078;
     border-radius: 3px;
