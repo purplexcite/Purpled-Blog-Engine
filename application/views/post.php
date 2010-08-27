@@ -1,5 +1,5 @@
 <div class="content_message">
-    <div class="content_title"><b><?php echo $title ?>, создано <?php echo $posted ?> неким <?php echo $author ?></b></div>
+    <div class="content_title"><b>&laquo;<?php echo $title ?>&raquo; &mdash; <?php echo $posted ?>, <?php echo $author ?></b></div>
     <div class="content_text"><?php echo nl2br($text) ?></div>
 </div>
 <?php echo !empty($comments_count) ? '<div class="content_title">Комментарии ('.$comments_count.')</div>': ''; ?>
@@ -29,7 +29,7 @@
         <p>
         <?php echo !empty($errors) ? $errors : ''; ?>
         <p>
-        <table valign="left">
+        <table align="center">
             <tr>
                 <td><b>Имя:</b></td>
                 <td><?php echo form::input('username') ?></td>
@@ -48,13 +48,14 @@
                 <td colspan="2"><?php echo html::image('captcha/default') ?></td>
             </tr>
             <tr>
-                <td><b>Текст изображения:</b></td>
+                <td><b>Какой текст с изображения выше:</b></td>
                 <td><?php echo form::input('captcha') ?></td>
             </tr>
             <tr>
-                <td colspan="2"><?php echo form::submit('submit', 'Отправить') ?></td>
+                <td colspan="2"><?php echo form::submit('submit', 'Отправить новый комментарий') ?></td>
             </tr>
         </table>
+        <p>
 
         <?php
 

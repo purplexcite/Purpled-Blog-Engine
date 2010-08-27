@@ -1,90 +1,111 @@
 body {
     margin: 0px;
+    
+    background: #F0F0D8;
 
-    font-family: Tahoma, Arial, Helvetica, sans-serif, Verdana;
-    font-size: 16px;
+    font: 12px Verdana;
+}
+form {
+    margin-bottom: 0px;
+}
+textarea, input {
+    border: 1px dotted #909078;
+    font: 12px Verdana;
+
+    background: #F0F0D8;
+
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -khtml-border-radius: 4px;
 }
 a {
     color: #000;
-    font-size: 13px;
+    font-size: 12px;
 }
 a:hover {
     text-decoration: none;
+    color: #CC0033;
+}
+.wrapper {
+    margin: 0 auto;
+    overflow: hidden;
+    width: 1000px;
+}
+.wrapper_header {
+    margin: 0 auto;
+    overflow: hidden;
+    width: 1000px;
 }
 .logo {
-    background: #CC0033;
+    background: #9B8374;
     height: 100px;
     width: 100%;
 
-    border-bottom: 15px solid #000;
+    border-bottom: 3px solid #584234;
 }
 .logo_name {
-    color: #fff;
-    font-size: 20px;
-
-    padding-left: 250px;
-    padding-top: 25px;
-
-    float: left;
+    color:#F0F0D8;
+    float:left;
+    font-size:20px;
+    padding-top:25px;
 }
 .logo_text {
-    color: #000;
-    font-size: 13px;
-
-    padding-left: 350px;
-
-    float: left;
-    clear: left;
+    clear:left;
+    color:#F0D8D8;
+    float:left;
+    font-size:12px;
 }
 .logo_contacts {
+    color: #F0F0D8;
+
     padding-left: 25%;
 
-    font-size: 13px;
+    font-size: 12px;
 
     float: left;
 }
+.logo_contacts a {
+    color: #fff;
+}
 .category {
-    background: #cccccc;
+    background: #EAF1C3;
     margin-top: 20px;
-    margin-left: 10px;
     width: 200px;
     
     float: left;
 
-    border:1px solid #000;
+    border: 1px solid #909078;
     border-radius:10px;
-    -moz-border-radius:10px;
-    -webkit-border-radius:10px;
-    -khtml-border-radius:10px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
 }
 .category_title {
     font-weight: bold;
     color: #fff;
 
-    background: #000;
+    background: #584234;
 
     padding-left: 25%;
     padding-top: 3px;
     padding-bottom: 3px;
 
-    border:0px solid #000;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    border: 0px solid #909078;
     border-radius:6px;
-    -moz-border-radius:6px;
-    -webkit-border-radius:6px;
-    -khtml-border-radius:6px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
 }
 .category a,ul {
-    font-size: 15px;
+    font-size: 12px;
     
     list-style: none;
     padding-left: 10px;
     padding-right: 10px;
-}
-.category input {
-    width: 180px;
-}
-.category form {
-    height: 50px;
 }
 .category a:hover {
     color: #CC0033;
@@ -97,22 +118,22 @@ a:hover {
     padding-top: 5px;
     padding-bottom: 5px;
 
-    background: #000;
+    background: #584234;
 
-    width: 75%;
+    width: 740px;
 
-    border:0px solid #000;
-    border-radius:6px;
-    -moz-border-radius:6px;
-    -webkit-border-radius:6px;
-    -khtml-border-radius:6px;
+    border: 0px solid #909078;
+    border-radius: 3px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -khtml-border-radius: 6px;
 }
 .breadcrumb a {
     color: #fff;
 }
 .breadcrumb_text {
     color: #fff;
-    font-size: 13px;
+    font-size: 12px;
 
     padding-left: 20px;
     padding-right: 20px;
@@ -121,28 +142,44 @@ a:hover {
 }
 .content {
     float: left;
-    width: 50%;
+    width: 740px;
 
-    margin-left: 60px;
+    background: #EAF1C3;
+
+    margin-left: 40px;
     margin-top: 20px;
+
+    border: 1px solid #909078;
+    border-radius: 7px;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -khtml-border-radius: 7px;
 }
 .content_title {
-    background: #ccc;
+    background: #584234;
+    color: #fff;
 
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 5px;
     padding-bottom: 5px;
+
+    border: 0px solid #909078;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -khtml-border-radius: 4px;
 }
 .content_text {
     margin-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 .content_message {
-    margin-top: 50px;
     margin-bottom: 50px;
 }
 .comment {
-    font-size: 15px;
+    font-size: 12px;
 
     margin-top: 20px;
     margin-left: 50px;
@@ -152,6 +189,6 @@ a:hover {
     margin-bottom: 30px;
 }
 .pagination {
-    font-size: 13px;
-    margin-left: 25%;
+    font-size: 12px;
+    margin-left: 130px;
 }

@@ -14,14 +14,18 @@
     </head>
     <body>
         <div class="logo">
+        <div class="wrapper_header">
             <div class="logo_name"><?php echo $title ?></div>
             <div class="logo_text"><?php echo $description ?></div>
             <div class="logo_contacts">
                 <b>Электронная почта:</b> <?php echo html::mailto('test@test.com') ?>
             </div>
         </div>
+        </div>
+        <div class="wrapper">
         <div style="float: left;">
             <div class="category">
+                <p>
                 <div class="category_title">Категории</div>
                 <ul>
                     <?php
@@ -33,25 +37,23 @@
 
                     ?>
                 </ul>
-            </div>
-            <div style="clear: left;"></div>
-            <div class="category">
+
                 <div class="category_title">Поиск</div>
+                <center>
+                <p>
                 <?php
 
                         echo form::open('search', array(
                                     'method' => 'get'
-                                    ))
+                                    ));
+                        echo form::input('q', !empty($_GET['q']) ? $_GET['q'] : '', array('style' => 'width: 137px'));
+                        echo form::submit('submit', 'ок');
+                        echo form::close();
 
                 ?>
-                <ul>
-                    <li><?php echo form::input('q', !empty($_GET['q']) ? $_GET['q'] : '') ?></li>
-                    <li><?php echo form::submit('submit', 'Поиск сообщений') ?></li>
-                </ul>
-                <?php echo form::close() ?>
-            </div>
-            <div style="clear: left;"></div>
-            <div class="category">
+                </center>
+                <p>
+
                 <div class="category_title" style="">Комментарии</div>
                 <ul>
                     <?php
@@ -59,13 +61,14 @@
                         foreach($last_comments as $comment)
                         {
                             echo '<ul>';
-                            echo '<li>&mdash;'.html::anchor('post/'.$comment->post_url.'-'.$comment->post_id, mb_substr($comment->text, 0, 20).'...').'</li>';
+                            echo '<li>&mdash;'.html::anchor('post/'.$comment->post_url.'-'.$comment->post_id, mb_substr($comment->text, 0, 30).'...').'</li><li>&nbsp;</li>';
                             echo '</ul>';
                         }
 
                     ?>
                 </ul>
             </div>
+            <div style="clear: left;"></div>
         </div>
         <div class="breadcrumb">
             <div class="breadcrumb_text">
@@ -107,6 +110,12 @@
                 echo $content;
 
             ?>
+        </div>
+
+        <div style="clear: left;"></div>
+
+        <p align="center">
+        &#169; purpled.biz, 2010
         </div>
     </body>
 </html>
