@@ -26,7 +26,7 @@
         <div style="float: left;">
             <div class="category">
                 <p>
-                <div class="category_title">Категории</div>
+                <div class="category_title"><h3>Категории</h3></div>
                 <ul>
                     <?php
 
@@ -38,7 +38,7 @@
                     ?>
                 </ul>
 
-                <div class="category_title">Поиск</div>
+                <div class="category_title"><h3>Поиск</h3></div>
                 <center>
                 <p>
                 <?php
@@ -54,7 +54,7 @@
                 </center>
                 <p>
 
-                <div class="category_title" style="">Комментарии</div>
+                <div class="category_title" style=""><h3>Комментарии</h3></div>
                 <ul>
                     <?php
 

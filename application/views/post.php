@@ -1,5 +1,5 @@
 <div class="content_message">
-    <div class="content_title"><b>&laquo;<?php echo $title ?>&raquo; &mdash; <?php echo $posted ?>, <?php echo $author ?></b></div>
+    <div class="content_title"><h1>&laquo;<?php echo $title ?>&raquo; &mdash; <?php echo $posted ?>, <?php echo $author ?></h1></div>
     <div class="content_text"><?php echo nl2br($text) ?></div>
 </div>
 <?php echo !empty($comments_count) ? '<div class="content_title">Комментарии ('.$comments_count.')</div>': ''; ?>

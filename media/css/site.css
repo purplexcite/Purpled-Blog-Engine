@@ -5,6 +5,10 @@ body {
 
     font: 12px Verdana;
 }
+h1, h3 {
+    font-size: 12px;
+    margin: 0px;
+}
 form {
     margin-bottom: 0px;
 }
