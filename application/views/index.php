@@ -31,7 +31,7 @@
                 foreach($posts as $post)
                 {
                     echo '<li><h3>&laquo;'.$post->title.'&raquo; &mdash; '.$post->posted.', '.$post->username.'</h3></li>';
-                    echo '<li>'.nl2br(mb_substr($post->content, 0, 25)).'...</li>';
+                    echo '<li>'.nl2br(strip_tags(mb_substr($post->content, 0, 25))).'...</li>';
                     echo '<li>&nbsp;</li>';
                     echo '<li>'.($post->allowcomment == 1 ? '<i>Комментариев: '.$model->get_count($post->id).'</i>' : '<i>Комментирование запрещено</i>').'</li>';
                     echo '<li>'.html::anchor('post/'.$post->url.'-'.$post->id, 'Читать далее').'</li>';
