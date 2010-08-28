@@ -199,6 +199,7 @@ class Controller_Site extends Controller_Abstract {
             if($this->post->check_post($postid) == TRUE AND $this->validate === TRUE)
             {
                 $this->comment->add_comment($postid);
+                $this->request->redirect($_SERVER['HTTP_REFERER']);
             }
             else
             {
