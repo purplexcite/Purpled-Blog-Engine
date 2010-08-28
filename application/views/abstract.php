@@ -61,7 +61,7 @@
                         foreach($last_comments as $comment)
                         {
                             echo '<ul>';
-                            echo '<li>&mdash;'.html::anchor('post/'.$comment->post_url.'-'.$comment->post_id, mb_substr($comment->text, 0, 30).'...').'</li><li>&nbsp;</li>';
+                            echo '<li>&mdash;'.html::anchor('post/'.$comment->post_url.'-'.$comment->post_id, '<i>'.$comment->username.':</i> '.mb_substr($comment->text, 0, 30).'...').'</li><li>&nbsp;</li>';
                             echo '</ul>';
                         }
 
