@@ -8,7 +8,7 @@
             <ul>
 
         <?php
-        
+
                 foreach($categories as $category)
                 {
                     echo '<li>'.html::anchor('category/'.$category->url.'-'.$category->id, $category->name).'</li>';
@@ -16,14 +16,14 @@
             }
 
         ?>
-            
+
             </ul>
-        
+
 <div class="content_title"><b>Сообщения</b></div>
     <div class="pagination"><?php echo $pagination ?></div>
     <ul>
         <?php
-        
+
             if(!empty($posts) AND $posts->count() != 0)
             {
                 $model = new Model_Comment;
@@ -66,14 +66,14 @@
                 {
                     $message = nl2br(mb_substr($post->content, 0, 25));
 
-                    close_tags($message, '(b|u|i)');
+                    close_tags($message, '(.+)');
 
-                    echo '<li><h3>&laquo;'.$post->title.'&raquo; &mdash; '.$post->posted.', '.$post->username.'</h3></li>';
+                    echo '<li>'.html::anchor('post/'.$post->url.'-'.$post->id, '<h3>&laquo;'.$post->title.'&raquo; &mdash; '.$post->posted.', '.$post->username.'</h3>').'</li>';
                     echo '<li>'.$message.'...</li>';
                     echo '<li>&nbsp;</li>';
                     echo '<li>'.($post->allowcomment == 1 ? '<i>Комментариев: '.$model->get_count($post->id).'</i>' : '<i>Комментирование запрещено</i>').'</li>';
                     echo '<li>'.html::anchor('post/'.$post->url.'-'.$post->id, 'Читать далее').'</li>';
-                    echo '<li>&nbsp;</li>';
+                    echo '<li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li>';
                 }
             }
             else {
