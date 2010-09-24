@@ -191,22 +191,30 @@ class Controller_Site extends Controller_Abstract {
 
         $this->action_post_main();
         $this->action_main_categories();
+<<<<<<< HEAD
         
         $this->username = Auth::instance()->get_user()->username;
         
         if((Captcha::valid($_POST['captcha']) AND $this->allowcomment == 1) OR !empty($this->username))
+=======
+
+        if(Captcha::valid($_POST['captcha']) AND $this->allowcomment == 1)
+>>>>>>> d1f48eb12b2f4afa561a6eaeb918e5a494cb769c
         {
             $this->validate = $this->comment->validate_comment();
 
             if($this->post->check_post($postid) == TRUE AND $this->validate === TRUE)
             {
                 $this->comment->add_comment($postid);
+<<<<<<< HEAD
                 
                 Cookie::$expiration = Date::WEEK;
                 Cookie::set('comment_username', $_POST['username']);
                 Cookie::set('comment_url', $_POST['url']);
                 
                 $this->request->redirect($_SERVER['HTTP_REFERER']);
+=======
+>>>>>>> d1f48eb12b2f4afa561a6eaeb918e5a494cb769c
             }
             else
             {

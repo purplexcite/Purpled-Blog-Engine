@@ -4,7 +4,11 @@
         echo "<rss version=\"2.0\">\r\n";
         echo "<channel>\r\n";
         echo "<title>".htmlspecialchars($title)."</title>\r\n";
+<<<<<<< HEAD
         echo "<link>http://".$_SERVER['HTTP_HOST']."</link>\r\n";
+=======
+        echo "<link>".$_SERVER['HTTP_HOST']."</link>\r\n";
+>>>>>>> d1f48eb12b2f4afa561a6eaeb918e5a494cb769c
         echo "<description>".htmlspecialchars($description)."</description>\r\n\r\n";
 
             foreach($feed as $entry)
@@ -12,7 +16,11 @@
                 echo "\r\n<item>\r\n";
 
                 echo "<title>".htmlspecialchars($entry['title'])."</title>\r\n";
+<<<<<<< HEAD
                 echo "<link>http://".$_SERVER['HTTP_HOST']."/post/".$entry['url']."-".$entry['id']."</link>\r\n";
+=======
+                echo "<link>".$_SERVER['HTTP_HOST']."/post/".$entry['url']."-".$entry['id']."</link>\r\n";
+>>>>>>> d1f48eb12b2f4afa561a6eaeb918e5a494cb769c
                 echo "<description><![CDATA[\"".stripslashes($entry['content'])."\"]]></description>\r\n";
                 echo "<pubDate>".$entry['posted']."</pubDate>\r\n";
 
