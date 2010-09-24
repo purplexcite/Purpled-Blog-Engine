@@ -20,11 +20,7 @@
             </ul>
         
 <div class="content_title"><b>Сообщения</b></div>
-<<<<<<< HEAD
     <div class="pagination"><center><?php echo $pagination ?></center></div>
-=======
-    <div class="pagination"><?php echo $pagination ?></div>
->>>>>>> d1f48eb12b2f4afa561a6eaeb918e5a494cb769c
     <ul>
         <?php
         
@@ -32,7 +28,6 @@
             {
                 $model = new Model_Comment;
 
-<<<<<<< HEAD
                 // Function from http://wap.blog.infan.ru/alex/1/16/?B=493
                 function close_tags(&$s, $tags)
                 {
@@ -79,15 +74,6 @@
                     echo '<li>'.($post->allowcomment == 1 ? '<i>Комментариев: '.$model->get_count($post->id).'</i>' : '<i>Комментирование запрещено</i>').'</li>';
                     echo '<li>'.html::anchor('post/'.$post->url.'-'.$post->id, 'Читать далее').'</li>';
                     echo '<li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li>';
-=======
-                foreach($posts as $post)
-                {
-                    echo '<li><h3>'.$post->title.', создано '.$post->posted.' неким '.$post->username.'</h3></li>';
-                    echo '<li>'.nl2br(mb_substr($post->content, 0, 25)).'...</li>';
-                    echo '<li>&nbsp;</li>';
-                    echo '<li>'.($post->allowcomment == 1 ? 'Комментариев: '.$model->get_count($post->id) : 'Комментирование запрещено').'</li>';
-                    echo '<li>'.html::anchor('post/'.$post->url.'-'.$post->id, 'Читать далее').'</li>';
->>>>>>> d1f48eb12b2f4afa561a6eaeb918e5a494cb769c
                 }
             }
             else {
@@ -96,8 +82,4 @@
 
         ?>
     </ul>
-<<<<<<< HEAD
     <div class="pagination"><center><?php echo $pagination ?></center></div>
-=======
-    <div class="pagination"><?php echo $pagination ?></div>
->>>>>>> d1f48eb12b2f4afa561a6eaeb918e5a494cb769c

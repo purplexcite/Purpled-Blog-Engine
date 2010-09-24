@@ -78,11 +78,7 @@ Kohana::modules(array(
 	// 'oauth'      => MODPATH.'oauth',      // OAuth authentication
 	'pagination' => MODPATH.'pagination', // Paging of results
 	// 'unittest'   => MODPATH.'unittest',   // Unit testing
-<<<<<<< HEAD
 	// 'userguide'  => MODPATH.'userguide',  // User guide and API documentation
-=======
-	'userguide'  => MODPATH.'userguide',  // User guide and API documentation
->>>>>>> d1f48eb12b2f4afa561a6eaeb918e5a494cb769c
 	));
 
 /**

@@ -11,11 +11,7 @@ RewriteBase /
 </Files>
 
 # Protect application and system files from being viewed
-<<<<<<< HEAD
 # RewriteRule ^(?:application|modules|system)\b.* index.php/$0 [L]
-=======
-RewriteRule ^(?:application|modules|system)\b.* index.php/$0 [L]
->>>>>>> d1f48eb12b2f4afa561a6eaeb918e5a494cb769c
 
 # Allow any files or directories that exist to be displayed directly
 RewriteCond %{REQUEST_FILENAME} !-f

@@ -109,13 +109,9 @@
 2010-08-22 20:49:19 --- ERROR: ErrorException [ 2 ]: Invalid argument supplied for foreach() ~ APPPATH/views/admin/categories.php [ 23 ]
 2010-08-22 20:50:52 --- ERROR: ErrorException [ 2 ]: Invalid argument supplied for foreach() ~ APPPATH/views/admin/categories.php [ 62 ]
 2010-08-22 20:51:04 --- ERROR: ErrorException [ 2 ]: Invalid argument supplied for foreach() ~ APPPATH/views/admin/categories.php [ 62 ]
-<<<<<<< HEAD
 2010-08-22 20:51:17 --- ERROR: ErrorException [ 2 ]: Invalid argument supplied for foreach() ~ APPPATH/views/admin/categories.php [ 62 ]
 2010-08-22 20:59:50 --- ERROR: ErrorException [ 2 ]: mysql_connect() [function.mysql-connect]: Access denied for user 'root'@'localhost' (using password: NO) ~ MODPATH/database/classes/kohana/database/mysql.php [ 56 ]
 2010-08-22 21:02:02 --- ERROR: ErrorException [ 2 ]: mysql_connect() [function.mysql-connect]: Access denied for user 'dasad_purpled'@'localhost' (using password: NO) ~ MODPATH/database/classes/kohana/database/mysql.php [ 56 ]
 2010-08-22 21:02:06 --- ERROR: ErrorException [ 2 ]: mysql_connect() [function.mysql-connect]: Access denied for user 'dasad_purpled'@'localhost' (using password: NO) ~ MODPATH/database/classes/kohana/database/mysql.php [ 56 ]
 2010-08-22 21:02:29 --- ERROR: Database_Exception [ 1146 ]: Table 'dasad_purpled.posts' doesn't exist [ SHOW FULL COLUMNS FROM `posts` ] ~ MODPATH/database/classes/kohana/database/mysql.php [ 178 ]
 2010-08-22 21:30:41 --- ERROR: ErrorException [ 1 ]: Call to a member function count() on a non-object ~ APPPATH/views/post.php [ 11 ]
-=======
-2010-08-22 20:51:17 --- ERROR: ErrorException [ 2 ]: Invalid argument supplied for foreach() ~ APPPATH/views/admin/categories.php [ 62 ]
->>>>>>> d1f48eb12b2f4afa561a6eaeb918e5a494cb769c
